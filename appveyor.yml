@@ -4,7 +4,7 @@ branches:
   except:
     - gh-pages
 
-clone_folder: C:\projects\wxSQLite3
+clone_folder: C:\projects\SQLite3-Cpp-Encryption
 
 image:
   - Visual Studio 2017
@@ -30,11 +30,11 @@ init:
   - echo %generator%
 
 before_build:
-  - mkdir C:\projects\wxSQLite3_build
-  - cd C:\projects\wxSQLite3_build
+  - mkdir C:\projects\SQLite3-Cpp-Encryption/build
+  - cd C:\projects\SQLite3-Cpp-Encryption/build
   - cmake --version
-  - cmake C:\projects\wxSQLite3\cmake -DCMAKE_BUILD_TYPE=%configuration% -G %generator%
+  - cmake .. -DCMAKE_BUILD_TYPE=%configuration% -G %generator%
 
 build_script:
-  - cd C:\projects\wxSQLite3_build
+  - cd C:\projects\SQLite3-Cpp-Encryption/build
   - cmake --build . --config %configuration%
