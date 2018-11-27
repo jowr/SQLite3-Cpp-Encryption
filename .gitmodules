@@ -1,0 +1,6 @@
+[submodule "externals/wxsqlite3"]
+	path = externals/wxsqlite3
+	url = https://github.com/utelle/wxsqlite3.git
+[submodule "externals/SQLiteCpp"]
+	path = externals/SQLiteCpp
+	url = https://github.com/SRombauts/SQLiteCpp.git
