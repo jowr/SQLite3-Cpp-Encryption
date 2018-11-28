@@ -30,11 +30,11 @@ init:
   - echo %generator%
 
 before_build:
-  - mkdir C:\projects\SQLite3-Cpp-Encryption/build
-  - cd C:\projects\SQLite3-Cpp-Encryption/build
+  - mkdir C:\projects\SQLite3-Cpp-Encryption\build
+  - cd C:\projects\SQLite3-Cpp-Encryption\build
   - cmake --version
   - cmake .. -DCMAKE_BUILD_TYPE=%configuration% -G %generator%
 
 build_script:
-  - cd C:\projects\SQLite3-Cpp-Encryption/build
+  - cd C:\projects\SQLite3-Cpp-Encryption\build
   - cmake --build . --config %configuration%
