@@ -23,6 +23,7 @@ environment:
 # scripts that run after cloning repository
 install:
  - git submodule update --init externals/SQLiteCpp
+ - git submodule update --init externals/SQLiteCpp/googletest
  - git submodule update --init externals/wxsqlite3
  
 init:
