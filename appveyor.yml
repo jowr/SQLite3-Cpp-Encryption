@@ -20,6 +20,11 @@ environment:
   - arch: Win32
   - arch: Win64
 
+# scripts that run after cloning repository
+install:
+ - git submodule update --init externals/SQLiteCpp
+ - git submodule update --init externals/wxsqlite3
+ 
 init:
   - echo %APPVEYOR_BUILD_WORKER_IMAGE% - %configuration% - %arch%
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2017" (set vs=Visual Studio 15 2017)
